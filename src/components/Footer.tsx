@@ -1,16 +1,28 @@
 
 import React from 'react';
+import { Github, Linkedin, Twitter } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900 py-12 md:py-16 border-t border-gray-200 dark:border-gray-800">
+    <footer className="bg-gray-50 dark:bg-gray-900 py-12 md:py-16 border-t border-gray-200 dark:border-gray-800">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
-          <div>
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 md:gap-12">
+          <div className="col-span-2">
             <div className="text-xl font-semibold mb-4">SuperParser</div>
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Extract structured data from any text source with the power of AI.
+            <p className="text-gray-600 dark:text-gray-400 mb-4 max-w-md">
+              Extract structured data from unstructured text with AI. Transform emails, documents, and web content into clean, usable data.
             </p>
+            <div className="flex space-x-4">
+              <a href="#" className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300" aria-label="Twitter">
+                <Twitter className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300" aria-label="GitHub">
+                <Github className="h-5 w-5" />
+              </a>
+              <a href="#" className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300" aria-label="LinkedIn">
+                <Linkedin className="h-5 w-5" />
+              </a>
+            </div>
           </div>
           
           <div>
@@ -74,18 +86,18 @@ const Footer: React.FC = () => {
           </p>
           
           <div className="flex space-x-6 mt-4 md:mt-0">
-            {["Twitter", "GitHub", "LinkedIn", "YouTube"].map((social) => (
-              <a 
-                key={social}
-                href={`https://${social.toLowerCase()}.com`} 
-                className="text-gray-400 hover:text-gray-500 dark:hover:text-gray-300"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="sr-only">{social}</span>
-                {social}
-              </a>
-            ))}
+            <a 
+              href="#"
+              className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 text-sm"
+            >
+              Status
+            </a>
+            <a 
+              href="#"
+              className="text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300 text-sm"
+            >
+              Support
+            </a>
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ const AnimatedGradient: React.FC<AnimatedGradientProps> = ({
 }) => {
   return (
     <div className={cn(
-      "absolute inset-0 opacity-20 overflow-hidden -z-10",
+      "absolute inset-0 opacity-10 overflow-hidden -z-10",
       className
     )}>
       <div className="absolute inset-0 animated-gradient blur-3xl"></div>
